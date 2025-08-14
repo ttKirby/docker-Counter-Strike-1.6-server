@@ -1,60 +1,27 @@
 services:
-  cs16-server:
-    image: ttkirby/cs16-server
-    container_name: cs16server
-    restart: unless-stopped
-
+  cs16:
+    image: ttkirby/cs15
+    container_name: ttkirby-counter-strike-1.6-server
     ports:
-      - "27015:27015/udp"
-
+      - 80:80
+      - 27015:27015/udp
     environment:
-      - SERVER_NAME=Mein Counter-Strike Server
-      - RCON_PASSWORD=deinRconPasswort
-      - HLDS_GAME=cstrike
-      - HLDS_IP=0.0.0.0
-      - HLDS_PORT=27015
-      - HLDS_MAP=de_dust2
-      - HLDS_MAXPLAYERS=16
-      - HLDS_LAN=0
-
+# PACK INSTALLER
+      - REHLDS=
+      - METAMOD=true
+      - AMXMODX=true
+      - FASTDL=true
+# ADMINISTRATION
+      - HOSTNAME=ttKirby's Counter-Strike 1.6 Server
+      - PASSWORD=
+      - RCON=
+      - STEAM_ID=STEAM_0:1:12345678
+# START PARAMETER
+      - SV_LAN=0
+      - MAP=de_dust2
+      - PLAYERS=16
+# PODBot & YaPB & ZBot
+      - BOTS=YaPB
     volumes:
-      # Hauptkonfiguration
-      - ./server.cfg:/hlds/cstrike/server.cfg
-      - ./mapcycle.txt:/hlds/cstrike/mapcycle.txt
-      - ./motd.txt:/hlds/cstrike/motd.txt
-      - ./banned.cfg:/hlds/cstrike/banned.cfg
-      - ./listip.cfg:/hlds/cstrike/listip.cfg
-
-      # Metamod
-      - ./plugins.ini:/hlds/cstrike/addons/metamod/plugins.ini
-
-      # AMX Mod X
-      - ./amxmodx/configs:/hlds/cstrike/addons/amxmodx/configs
-      - ./amxmodx/plugins:/hlds/cstrike/addons/amxmodx/plugins
-      - ./amxmodx/scripting:/hlds/cstrike/addons/amxmodx/scripting
-      - ./amxmodx/logs:/hlds/cstrike/addons/amxmodx/logs
-      - ./users.ini:/hlds/cstrike/addons/amxmodx/configs/users.ini
-
-      # Gesamter Addons-Ordner (z. B. PODBot, StatsMe, etc.)
-      - ./addons:/hlds/cstrike/addons
-
-      # Map-Konfigurationen und zusätzliche Maps
-      - ./maps:/hlds/cstrike/maps
-      - ./maps/cfg:/hlds/cstrike/maps/cfg
-    networks:
-      - proxy-intern
-
-  fastdl:
-    image: nginx:stable-alpine
-    container_name: fastdl
-    volumes:
-      - ./fastdl:/usr/share/nginx/html/cstrike:ro
-      - ./nginx_config.conf:/etc/nginx/conf.d/default.conf:ro
-    ports:
-      - "8080:80"
-    networks:
-      - proxy-intern
-networks:
-  proxy-intern:
-    name: proxy-intern
-    external: true
+      - ./hlds:/hlds
+    restart: unless-stopped
