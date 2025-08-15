@@ -1,1 +1,3 @@
-# Counter-Strike-1.6-Server
+README COMMING SOON!
+
+https://hub.docker.com/repository/docker/ttkirby/cs16-server
