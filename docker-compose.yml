@@ -1,27 +1,36 @@
 services:
   cs16:
-    image: ttkirby/cs15
+    image: ttkirby/cs16-server
     container_name: ttkirby-counter-strike-1.6-server
     ports:
       - 80:80
       - 27015:27015/udp
     environment:
 # PACK INSTALLER
-      - REHLDS=
+      - REHLDS=buggy_dont_use
       - METAMOD=true
       - AMXMODX=true
       - FASTDL=true
 # ADMINISTRATION
       - HOSTNAME=ttKirby's Counter-Strike 1.6 Server
-      - PASSWORD=
-      - RCON=
+      - PASSWORD=your_server_password
+      - RCON=your_rcon_password
       - STEAM_ID=STEAM_0:1:12345678
 # START PARAMETER
       - SV_LAN=0
       - MAP=de_dust2
-      - PLAYERS=16
-# PODBot & YaPB & ZBot
+      - PLAYERS=32
+      - SERVER_TICK=1000
+# YaPB & PODBot & ZBot
       - BOTS=YaPB
+      - KEY=yourkey
+      - PW=youpassword
     volumes:
-      - ./hlds:/hlds
+      - /your/path/to/hlds:/hlds
     restart: unless-stopped
+    networks:
+      - dockernet
+networks:
+  dockernet:
+    name: dockernet
+    external: true
