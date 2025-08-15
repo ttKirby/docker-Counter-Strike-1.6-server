@@ -58,12 +58,12 @@ else
 fi
 
 # Add, change and clear STEAM ID
-if [[ -z "$STEAM_ID" ]]; then
-  sed -i '/## CUSTOM ADMIN/,$d' "$USERS_INI"
+if [[ -z "$STEAM_ID" && "$AMXMODX" == "true" ]]; then
+  sed -i '/## CUSTOM/,$d' "$USERS_INI"
   echo "[INFO] Steam ID's removed."
 elif ! grep -Fq "\"$STEAM_ID\"" "$USERS_INI"; then
-  if ! grep -Fq "## CUSTOM ADMIN" "$USERS_INI"; then
-    echo "## CUSTOM ADMIN" >> "$USERS_INI"
+  if ! grep -Fq "## CUSTOM" "$USERS_INI"; then
+    echo "## CUSTOM" >> "$USERS_INI"
   fi
   echo "\"$STEAM_ID\" \"\" \"abcdefghijklmnopqrstu\" \"ce\"" >> "$USERS_INI"
   echo "[SUCCESS] Steam ID has been successfully registered."

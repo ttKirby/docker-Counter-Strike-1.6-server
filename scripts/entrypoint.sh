@@ -13,8 +13,19 @@ for module in "${MODULES[@]}"; do
   fi
 done
 
-bash /scripts/bots.sh
 bash /scripts/administration.sh
+bash /scripts/bots.sh
+
+if [[ "$BOTS" == "YaPB" ]];then
+  bash /scripts/bot_yapb.sh
+elif [[ "$BOTS" == "PODbot" ]];then
+  bash /scripts/podbot.sh
+elif [[ "$BOTS" == "ZBot" ]];then
+  echo "gibts noch nicht"
+  # bash /scripts/zbot.sh
+else
+    echo "kein bot gewählt"
+fi
 
 if [[ "$FASTDL" == "true" ]]; then
   service nginx start
@@ -28,4 +39,5 @@ exec ./hlds_run \
   -port 27015 \
   +sv_lan "${SV_LAN:-0}" \
   +map "${MAP:-de_dust2}" \
-  +maxplayers "${PLAYERS:-16}"
+  +maxplayers "${PLAYERS:-16}" \
+  +sys_ticrate "${SERVER_TICK:-100}"
