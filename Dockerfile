@@ -19,12 +19,14 @@ WORKDIR /steamcmd
 
 COPY /scripts/entrypoint.sh /scripts/entrypoint.sh
 COPY /scripts/cstrike.sh /scripts/cstrike.sh
+COPY /scripts/rehlds.sh /scripts/rehlds.sh
 COPY /scripts/metamod.sh /scripts/metamod.sh
 COPY /scripts/amxmodx.sh /scripts/amxmodx.sh
-COPY /scripts/bots.sh /scripts/bots.sh
 COPY /scripts/fastdl.sh /scripts/fastdl.sh
-COPY /scripts/rehlds.sh /scripts/rehlds.sh
 COPY /scripts/administration.sh /scripts/administration.sh
+COPY /scripts/bots.sh /scripts/bots.sh
+COPY /scripts/bot_yapb.sh /scripts/bot_yapb.sh
+COPY /scripts/bot_podbot.sh /scripts/bot_podbot.sh
 COPY /nginx.conf /etc/nginx/sites-available/default
 RUN chmod -R +x /scripts
 
