@@ -2,32 +2,17 @@
 set -e
 
 bash /scripts/cstrike.sh
+bash /scripts/rehlds.sh
+bash /scripts/metamod.sh
+bash /scripts/amxmodx.sh
+bash /scripts/fast_dl.sh
+bash /scripts/hostname.sh
+bash /scripts/password.sh
+bash /scripts/rcon.sh
+bash /scripts/steam_id.sh
+bash /scripts/bot.sh
 
-MODULES=("rehlds" "metamod" "amxmodx" "fastdl")
-
-for module in "${MODULES[@]}"; do
-  varname=$(echo "$module" | tr '[:lower:]' '[:upper:]')
-  value="${!varname}"
-  if [[ "$value" == "true" ]]; then
-    bash "/scripts/${module}.sh"
-  fi
-done
-
-bash /scripts/administration.sh
-bash /scripts/bots.sh
-
-if [[ "$BOTS" == "YaPB" ]];then
-  bash /scripts/bot_yapb.sh
-elif [[ "$BOTS" == "PODbot" ]];then
-  bash /scripts/podbot.sh
-elif [[ "$BOTS" == "ZBot" ]];then
-  echo "gibts noch nicht"
-  # bash /scripts/zbot.sh
-else
-    echo "kein bot gewählt"
-fi
-
-if [[ "$FASTDL" == "true" ]]; then
+if [[ "$FAST_DL" == "true" ]]; then
   service nginx start
 fi
 

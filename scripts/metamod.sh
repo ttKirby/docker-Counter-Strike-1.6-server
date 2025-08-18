@@ -8,7 +8,7 @@ if [[ -f /hlds/cstrike/addons/metamod/dlls/metamod_i386.so ]] && \
    [[ -f /hlds/cstrike/addons/metamod/plugins.ini ]]; then
   echo "[OK] MetaMod is already installed."
 
-else
+elif [[ "$METAMOD" == true ]]; then
   echo "[INFO] Installing Metamod 1.20..."
 
   mkdir -p /hlds/cstrike/addons/metamod/dlls && \

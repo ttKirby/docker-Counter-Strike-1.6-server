@@ -3,9 +3,11 @@ set -e
 
 REHLDS_URL="https://github.com/rehlds/ReHLDS/releases/download/3.14.0.857/rehlds-bin-3.14.0.857.zip"
 
-if [ -f "/hlds/rehlds.txt" ];then
+if [[ -f "/hlds/rehlds.txt" ]];then
   echo "[OK] ReHLDS is already isntalled."
-else
+elif [[ "$LEGACY" != true && "$REHLDS" == true ]]; then
+  echo "[SKIP] REHLDS can only be used when LEGACY is set to true."
+elif [[ "$LEGACY" == true && "$REHLDS" == true ]]; then
   echo "[INFO] Downloading ReHLDS 3.14.0.857..."
 
   wget -q "$REHLDS_URL" -O rehlds.zip
