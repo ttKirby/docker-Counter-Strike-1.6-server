@@ -46,7 +46,7 @@ elif [[ "$BOT" == "YaPB" ]]; then
     echo "[SUCCESS] YaPB 4.4.957 installed and registered successfully."
   fi
 
-# elif [[ "$BOT" == "ZBot" ]]; then
-#   echo "[INFO] Downloading..."
-#   bash /scripts/zbot.sh
+elif [[ "$BOT" == "ZBot" ]]; then
+  echo "[INFO] Not yet implemented."
+  # bash /scripts/zbot.sh
 fi
