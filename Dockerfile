@@ -22,9 +22,12 @@ COPY /scripts/cstrike.sh /scripts/cstrike.sh
 COPY /scripts/rehlds.sh /scripts/rehlds.sh
 COPY /scripts/metamod.sh /scripts/metamod.sh
 COPY /scripts/amxmodx.sh /scripts/amxmodx.sh
-COPY /scripts/fastdl.sh /scripts/fastdl.sh
-COPY /scripts/administration.sh /scripts/administration.sh
-COPY /scripts/bots.sh /scripts/bots.sh
+COPY /scripts/fast_dl.sh /scripts/fast_dl.sh
+COPY /scripts/hostname.sh /scripts/hostname.sh
+COPY /scripts/password.sh /scripts/password.sh
+COPY /scripts/rcon.sh /scripts/rcon.sh
+COPY /scripts/steam_id.sh /scripts/steam_id.sh
+COPY /scripts/bot.sh /scripts/bot.sh
 COPY /scripts/bot_yapb.sh /scripts/bot_yapb.sh
 COPY /scripts/bot_podbot.sh /scripts/bot_podbot.sh
 COPY /nginx.conf /etc/nginx/sites-available/default
