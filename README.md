@@ -1,4 +1,4 @@
-Inspired by [archont94's Counter-Strike 1.6 project](https://github.com/archont94/counter-strike1.6), this repository provides a streamlined setup for hosting your own CS 1.6 server using 
+Inspired by [archont94](https://github.com/archont94/counter-strike1.6), this repository provides a streamlined setup for hosting your own CS 1.6 server using 
 
 Beta Version. 
 
