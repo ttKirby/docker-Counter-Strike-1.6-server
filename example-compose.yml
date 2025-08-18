@@ -1,16 +1,17 @@
 services:
   cs16:
     image: ttkirby/cs16-server
-    container_name: ttkirby-counter-strike-1.6-server
+    container_name: cs16-server
     ports:
       - 80:80
       - 27015:27015/udp
     environment:
 # PACK INSTALLER
-      - REHLDS=buggy_dont_use
+      - LEGACY=true
+      - REHLDS=true
       - METAMOD=true
       - AMXMODX=true
-      - FASTDL=true
+      - FAST_DL=true
 # ADMINISTRATION
       - HOSTNAME=ttKirby's Counter-Strike 1.6 Server
       - PASSWORD=your_server_password
@@ -21,10 +22,10 @@ services:
       - MAP=de_dust2
       - PLAYERS=32
       - SERVER_TICK=1000
-# YaPB & PODBot & ZBot
-      - BOTS=YaPB
+# YaPB & PODBot & ZBot (needs METAMOD)
+      - BOT=YaPB
       - KEY=yourkey
-      - PW=youpassword
+      - PW=yourpassword
     volumes:
       - /your/path/to/hlds:/hlds
     restart: unless-stopped
