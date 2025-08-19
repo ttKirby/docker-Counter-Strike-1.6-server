@@ -12,7 +12,7 @@ So here it is: my Counter-Strike 1.6 server in Docker, inspired by [archont94](h
 
 ## Instructions
 
-You can pull the image anytime from [my Docker Hub](https://hub.docker.com/repository/docker/ttkirby/cs16-server)
+You can pull the image anytime from [my](https://hub.docker.com/repository/docker/ttkirby/cs16-server) Docker Hub.
 
 There are several environment variables you can set when starting the container to get going without having to fiddle around too much with configuration files.
 
