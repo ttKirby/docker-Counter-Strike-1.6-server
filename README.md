@@ -68,7 +68,7 @@ For deeper information on certain details like the Legacy and Anniversary editio
   - `0` or `1`
 
 - `MAP`
-  - Enter the starting map.
+  - Name of the starting map.
 
 - `PLAYERS`
   - Maximum number of players on the server (32 is the limit)
