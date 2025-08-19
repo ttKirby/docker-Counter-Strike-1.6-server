@@ -61,6 +61,8 @@ For deeper information on certain details like the Legacy and Anniversary editio
   - These two values are needed to configure bots in-game.
   - Example: `KEY=examplekey` and `PW=examplepassword`
   - Enter in console: `"setinfo examplekey examplepassword"`
+  - For YaPB type `yb menu` into the console, or bind it with `bind "your_key" "yb menu"` to open the bot menu.
+  - For PODBot MM the same with `"pb menu"`
 
 - `SV_LAN`
   - `0` or `1`
