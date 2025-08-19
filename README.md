@@ -1,4 +1,4 @@
-# ttKirby#'s Counter-Strike 1.6 Server in a Dockerfile
+# ttKirby's Counter-Strike 1.6 Server in a Dockerfile
 
 ## Introduction
 
