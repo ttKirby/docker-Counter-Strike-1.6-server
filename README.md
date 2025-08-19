@@ -14,9 +14,6 @@ So here it is: my Counter-Strike 1.6 server in Docker, inspired by [archont94](h
 
 You can pull the image anytime from [my Docker Hub](https://hub.docker.com/repository/docker/ttkirby/cs16-server)
 
-<a href="[https://github.com/dein-user/dein-repo](https://hub.docker.com/repository/docker/ttkirby/cs16-server)" target="_blank">Mein GitHub-Projekt</a>
-
-
 There are several environment variables you can set when starting the container to get going without having to fiddle around too much with configuration files.
 
 Technically, all environment variables can be left empty.  
