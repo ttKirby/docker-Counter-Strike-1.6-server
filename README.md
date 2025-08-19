@@ -1,7 +1,5 @@
 # ttKirby's Counter-Strike 1.6 Server in a Dockerfile
 
-google-site-verification: googlecae7112e72f41d66.html
-
 ## Introduction
 
 Hey ho,  
