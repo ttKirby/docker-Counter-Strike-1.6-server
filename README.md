@@ -107,7 +107,8 @@ MetaMod
 
 **Volumes**  
 - The path under Volumes stores the entire HLDS folder on the host system, including all files relevant to the server.
-- So if you want to apply custom settings, you can do so at any time. (Don’t forget to restart the container.)
+- So if you want to apply custom settings, you can do so at any time. 
+- Same with mods, custom sounds, maps, sprites, models etc.  (Don’t forget to restart the container/server.)
 
 ## Bugs, Questions, and Suggestions for Improvement
 
