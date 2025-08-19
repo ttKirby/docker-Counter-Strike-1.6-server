@@ -107,9 +107,11 @@ MetaMod
 - The path under Volumes stores the entire HLDS folder on the host system, including all files relevant to the server.
 - So if you want to apply custom settings, you can do so at any time. (Don’t forget to restart the container.)
 
-## Bugs
+## Bugs, Questions, and Suggestions for Improvement
 
 - If you find bugs, don’t keep them to yourself – share them!
+- If you have questions, just ask!
+- If you have any suggestions for improvement, feel free to share!
 - I care about good service and a clean-running script/program/whatever, so it’s important to me that this Dockerfile is as bug-free as possible.
 
 ## License
