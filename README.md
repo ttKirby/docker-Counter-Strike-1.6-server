@@ -36,7 +36,15 @@ For deeper information on certain details like the Legacy and Anniversary editio
 
 - `FAST_DL`
   - If set to `"true"`, an nginx service will be provided for fast downloads of certain resources.
-  - This is especially useful for dedicated servers with lots of mods, custom sounds, maps, sprites, models, etc., as resources would otherwise download very slowly.
+  - This is especially useful for dedicated servers with lots of custom resources would otherwise download very slowly.
+  - Whole list:
+    - /hlds/cstrike/gfx
+    - /hlds/cstrike/maps
+    - /hlds/cstrike/models
+    - /hlds/cstrike/overviews
+    - /hlds/cstrike/sound
+    - /hlds/cstrike/sprites
+  - If you want to edit the nginx.conf, it is located in the container under "/etc/nginx/sites-available/default" where "default" is the name of the nginx.conf.
 
 - `HOSTNAME`
   - Sets the server name.
