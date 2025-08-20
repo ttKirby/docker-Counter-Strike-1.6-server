@@ -28,6 +28,7 @@ services:
       - PW=yourpassword
     volumes:
       - /your/path/to/hlds:/hlds
+#      - /your/path/to/nginx/conf:/etc/nginx/sites-available/default
     restart: unless-stopped
     networks:
       - dockernet
