@@ -35,7 +35,7 @@ For deeper information on certain details like the Legacy and Anniversary editio
   - It depends on MetaMod.
 
 - `FAST_DL`
-  - If set to `"true"`, an nGinx service will be provided for fast downloads of certain resources.
+  - If set to `"true"`, an nginx service will be provided for fast downloads of certain resources.
   - This is especially useful for dedicated servers with lots of mods, custom sounds, maps, sprites, models, etc., as resources would otherwise download very slowly.
 
 - `HOSTNAME`
@@ -100,7 +100,7 @@ MetaMod
 ## Ports and Volumes
 
 **Port 80**  
-- Required if Fast Download is set to `"true"`, since the nGinx service listens on port 80 by default.
+- Required if Fast Download is set to `"true"`, since the nginx service listens on port 80 by default.
 
 **Port 27015/udp**  
 - Default port for CS 1.6 servers.
