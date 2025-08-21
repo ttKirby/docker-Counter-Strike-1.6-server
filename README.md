@@ -25,7 +25,7 @@ For deeper information on certain details like the Legacy and Anniversary editio
   - If set to `"true"`, a version prior to the 25th Anniversary Edition (Build 8684) will be installed.
 
 - `REHLDS`
-  - To install [ReHLDS](https://github.com/rehlds/ReHLDS), the Legacy version is required → [Issue](https://github.com/rehlds/ReHLDS/issues/999)
+  - To install [ReHLDS](https://github.com/rehlds/ReHLDS), the Legacy version is required → [Topic](https://github.com/rehlds/ReHLDS/issues/999)
 
 - `METAMOD`
   - If set to `"true"`, MetaMod will be installed, which is required for certain mods.
@@ -73,13 +73,13 @@ For deeper information on certain details like the Legacy and Anniversary editio
   - For PODBot MM the same with `"pb menu"`
 
 - `SV_LAN`
-  - `0` or `1`
+  - Sets the server to LAN (1) or online (0) mode.
 
 - `MAP`
   - Name of the starting map.
 
 - `PLAYERS`
-  - Maximum number of players on the server (32 is the limit)
+  - Maximum number of players on the server (limit is 32)
 
 - `SERVER_TICK`
   - Server tickrate
