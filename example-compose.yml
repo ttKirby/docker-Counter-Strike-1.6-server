@@ -6,7 +6,7 @@ services:
       - 80:80
       - 27015:27015/udp
     environment:
-# PACK INSTALLER
+# INSTALLER
       - LEGACY=true
       - REHLDS=true
       - METAMOD=true
@@ -22,7 +22,7 @@ services:
       - MAP=de_dust2
       - PLAYERS=32
       - SERVER_TICK=1000
-# YaPB & PODBot & ZBot (needs METAMOD)
+# YaPB & PODBot (needs METAMOD)
       - BOT=YaPB
       - KEY=yourkey
       - PW=yourpassword
